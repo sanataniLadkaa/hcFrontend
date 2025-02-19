@@ -23,7 +23,7 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://house-capital.vercel.app/api/contact', formData);
+      const response = await axios.post('https://house-capital.vercel.app/contact', formData);
       console.log(response.data);
       setFormSubmitted(true);
     } catch (error) {
