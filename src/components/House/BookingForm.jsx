@@ -18,7 +18,7 @@ const BookingForm = ({ house }) => {
     };
 
     try {
-      const response = await fetch('https://house-capital.vercel.app/api/book-house', {
+      const response = await fetch('https://house-capital.vercel.app/book-house', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(bookingData),
