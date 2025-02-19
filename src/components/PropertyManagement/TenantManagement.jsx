@@ -18,7 +18,7 @@ const TenantManagement = () => {
   // Toggle tenant status
   const handleStatusToggle = async (id) => {
     try {
-      const response = await fetch(`https://house-capital.vercel.app/tenants/${id}/toggle-status`, {
+      const response = await fetch(`https://hhbackend-ivory.vercel.app/tenants/${id}/toggle-status`, {
         method: 'PATCH',
       });
       const updatedTenant = await response.json();
