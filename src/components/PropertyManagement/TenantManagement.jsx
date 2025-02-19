@@ -34,7 +34,7 @@ const TenantManagement = () => {
   const handleAddTenant = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://house-capital.vercel.app/tenants', {
+      const response = await fetch('https://hhbackend-ivory.vercel.app/tenants', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newTenant),
@@ -51,7 +51,7 @@ const TenantManagement = () => {
   const handleEditTenant = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`https://house-capital.vercel.app/tenants/${currentTenant.id}`, {
+      const response = await fetch(`https://hhbackend-ivory.vercel.app/tenants/${currentTenant.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(currentTenant),
@@ -70,7 +70,7 @@ const TenantManagement = () => {
   // Delete a tenant
   const handleDeleteTenant = async (id) => {
     try {
-      await fetch(`https://house-capital.vercel.app/tenants/${id}`, {
+      await fetch(`https://hhbackend-ivory.vercel.app/tenants/${id}`, {
         method: 'DELETE',
       });
       setTenantList((prevList) => prevList.filter((tenant) => tenant.id !== id));
