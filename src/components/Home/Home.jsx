@@ -1,25 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import './style.css';
 import PurchasePage from '../House/PurchasePage';
 
 const Home = () => {
-  const [services, setServices] = useState([]);
-
-  useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        const response = await axios.get('https://house-capital.vercel.app/api/services');
-        setServices(response.data);
-      } catch (error) {
-        console.error('Error fetching services:', error);
-      }
-    };
-
-    fetchServices();
-  }, []); // Empty dependency array ensures this runs once on mount
-
   const openChatbot = () => {
     const chatbotWindow = window.open(
       'chat.html', 
